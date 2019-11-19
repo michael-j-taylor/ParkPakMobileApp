@@ -2,4 +2,10 @@
     <string name="app_name">ParkPalMobileApp</string>
     <string name="title_activity_maps">Map</string>
     <string name="button_home_map">Map</string>
+    <string name="add_card_button">Add Card</string>
+    <string name="card_number">Enter Card Number</string>
+    <string name="card_user_name">Enter Name on Card</string>
+    <string name="card_expiration_date">Enter Date of Expiration MM/YY</string>
+    <string name="card_cvv">Eneter Card CVV</string>
+    <string name="card_skip_button">Skip</string>
 </resources>
