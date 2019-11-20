@@ -16,16 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CreateNewUser">
-        <activity android:name=".Garage1Activity"></activity>
-        <activity android:name=".PaymentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Garage1Activity"></activity>
         <activity android:name=".PaymentActivity"></activity>
-        <activity android:name=".MainMenuActivity" />
         <activity android:name=".MainMenuActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -41,7 +39,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps"/>
     </application>
 
 </manifest>

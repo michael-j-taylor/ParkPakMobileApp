@@ -17,4 +17,5 @@
     <string name="create_user_plate">Enter License Plate</string>
     <string name="user_sign_up">Sign Up</string>
     <string name="garage_1_temp">There Are 17 Spots Left</string>
+    <string name="autopayments_checkbox">Sign up for automatic payments</string>
 </resources>
