@@ -8,4 +8,5 @@
     <string name="card_expiration_date">Enter Date of Expiration MM/YY</string>
     <string name="card_cvv">Enter Card CVV</string>
     <string name="card_skip_button">Skip</string>
+    <string name="garage_placeholder">17 spots left</string>
 </resources>
