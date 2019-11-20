@@ -56,11 +56,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     //as of now, just opens main menu activity
     public fun openGarageActivity(marker : Marker) {
         if (marker.title == "garage1") {
-            val intent = Intent(this, MainMenuActivity :: class.java)
+            val intent = Intent(this, Garage1Activity :: class.java)
             startActivity(intent)
         }
         else if (marker.title == "garage2") {
-            val intent = Intent(this, MainMenuActivity :: class.java)
+            val intent = Intent(this, Garage1Activity :: class.java)
             startActivity(intent)
         }
     }
