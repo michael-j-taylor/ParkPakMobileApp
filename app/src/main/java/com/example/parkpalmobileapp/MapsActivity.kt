@@ -7,6 +7,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
@@ -40,9 +41,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val garage1 = LatLng(33.5778, -101.8752)
         val garage2 = LatLng(33.5190, -101.8534)
 
-        val garage1_marker = mMap.addMarker(MarkerOptions().position(garage1).title("garage1"))
-        val garage2_marker = mMap.addMarker(MarkerOptions().position(garage2).title("garage2"))
+        val garage1_marker = mMap.addMarker(MarkerOptions()
+            .position(garage1).title("garage1"))
+            .setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
 
+        val garage2_marker = mMap.addMarker(MarkerOptions()
+            .position(garage2).title("garage2"))
+            .setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+
+        //.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(garage1))
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11.toFloat()), 2000, null)
 
