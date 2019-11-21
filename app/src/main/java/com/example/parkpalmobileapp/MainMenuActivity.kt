@@ -24,5 +24,12 @@ class MainMenuActivity : AppCompatActivity() {
             val sign_up_intent = Intent(this, CreateNewUser :: class.java)
             startActivity(sign_up_intent)
         }
+
+        val report_menu = findViewById<Button>(R.id.report_vehicle_button)
+
+        report_menu.setOnClickListener {
+            val report_intent = Intent(this, ReportVehicle :: class.java)
+            startActivity(report_intent)
+        }
     }
 }
