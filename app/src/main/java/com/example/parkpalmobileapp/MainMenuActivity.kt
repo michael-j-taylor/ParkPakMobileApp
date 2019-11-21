@@ -17,5 +17,12 @@ class MainMenuActivity : AppCompatActivity() {
             val intent = Intent(this, MapsActivity :: class.java)
             startActivity(intent)
         }
+
+        val user_set_up = findViewById<Button>(R.id.user_set_up)
+
+        user_set_up.setOnClickListener {
+            val sign_up_intent = Intent(this, CreateNewUser :: class.java)
+            startActivity(sign_up_intent)
+        }
     }
 }

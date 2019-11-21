@@ -1,19 +1,25 @@
 package com.example.parkpalmobileapp
 
+import android.content.Context
 import android.content.Intent
+import android.location.Address
+import android.location.Geocoder
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import java.lang.Exception
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
+    //private lateinit var fuse: FusedL
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,14 +43,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker at garage location and move the camera
-        val garage1 = LatLng(33.5778, -101.8752)
-        val garage2 = LatLng(33.5190, -101.8534)
+        //val garage1 = LatLng(33.5778, -101.8752) 1838-1842 Flint Ave, Lubbock, TX 79410
+        val garage_raiderpark = LatLng(33.593419, -101.874219)
+        val garage_z4 = LatLng(33.578933, -101.884648)
 
-        val garage1_marker = mMap.addMarker(MarkerOptions().position(garage1).title("garage1"))
-        val garage2_marker = mMap.addMarker(MarkerOptions().position(garage2).title("garage2"))
+        val garage_raiderpark_marker = mMap.addMarker(MarkerOptions()
+            .position(garage_raiderpark).title("garage_raiderpark"))
+            .setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(garage1))
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(11.toFloat()), 2000, null)
+        val garage_z4_marker = mMap.addMarker(MarkerOptions()
+            .position(garage_z4).title("garage_z4"))
+            .setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(LatLng(33.586410, -101.875340)))
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(14.toFloat()), 2000, null)
 
         mMap.setOnMarkerClickListener { marker ->
             openGarageActivity(marker)
@@ -54,17 +66,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     //Open specific activity based on clicked marker's title
     //as of now, just opens main menu activity
-    public fun openGarageActivity(marker : Marker) {
-        if (marker.title == "garage1") {
-            val intent = Intent(this, Garage1Activity :: class.java)
+    fun openGarageActivity(marker : Marker) {
+        if (marker.title == "garage_raiderpark") {
+            val intent = Intent(this, GarageRaiderParkActivity :: class.java)
             startActivity(intent)
         }
-        else if (marker.title == "garage2") {
+        else if (marker.title == "garage_z4") {
             val intent = Intent(this, Garage1Activity :: class.java)
             startActivity(intent)
         }
     }
-
-
 
 }
