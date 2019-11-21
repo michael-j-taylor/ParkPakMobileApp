@@ -5,7 +5,7 @@
     <string name="add_card_button">Add Card</string>
     <string name="card_number">Enter Card Number</string>
     <string name="card_user_name">Enter Name on Card</string>
-    <string name="card_expiration_date">Enter Date of Expiration MMYY</string>
+    <string name="card_expiration_date">Enter Date of Expiration MM/YY</string>
     <string name="card_cvv">Enter Card CVV</string>
     <string name="card_skip_button">Skip</string>
     <string name="title_activity_create_user">CreateUserActivity</string>
@@ -14,9 +14,11 @@
     <string name="create_pass">Enter a Password</string>
     <string name="create_confirm_pass">Confirm Password Entered</string>
     <string name="create_user_button">Create Account</string>
-    <string name="enter_license_plate">Enter License Plate</string>
+    <string name="create_user_plate">Enter License Plate</string>
     <string name="user_sign_up">Sign Up</string>
     <string name="garage_1_temp">There Are 17 Spots Left</string>
     <string name="autopayments_checkbox">Sign up for automatic payments</string>
-    <string name="report_menu_button">Report Vehicle</string>
+    <string name="takemethere">Take me there!</string>
+    <string name="z4_counter">6</string>
+    <string name="spaces_remaining">spaces remaining</string>
 </resources>
