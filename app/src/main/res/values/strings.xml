@@ -5,7 +5,7 @@
     <string name="add_card_button">Add Card</string>
     <string name="card_number">Enter Card Number</string>
     <string name="card_user_name">Enter Name on Card</string>
-    <string name="card_expiration_date">Enter Date of Expiration MM/YY</string>
+    <string name="card_expiration_date">Enter Date of Expiration MMYY</string>
     <string name="card_cvv">Enter Card CVV</string>
     <string name="card_skip_button">Skip</string>
     <string name="title_activity_create_user">CreateUserActivity</string>
@@ -21,4 +21,7 @@
     <string name="takemethere">Take me there!</string>
     <string name="z4_counter">6</string>
     <string name="spaces_remaining">spaces remaining</string>
+    <string name="report_button">Report a Vehicle</string>
+    <string name="report_vehicle_button">Report Vehicle</string>
+    <string name="other_reason">Enter the Reason</string>
 </resources>

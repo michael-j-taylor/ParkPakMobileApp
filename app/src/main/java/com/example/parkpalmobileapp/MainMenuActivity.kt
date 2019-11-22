@@ -12,23 +12,20 @@ class MainMenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main_menu)
 
         val button_home_map = findViewById<Button>(R.id.button_home_map)
-
         button_home_map.setOnClickListener {
             val intent = Intent(this, MapsActivity :: class.java)
             startActivity(intent)
         }
 
         val user_set_up = findViewById<Button>(R.id.user_set_up)
-
         user_set_up.setOnClickListener {
             val sign_up_intent = Intent(this, CreateNewUser :: class.java)
             startActivity(sign_up_intent)
         }
 
         val report_menu = findViewById<Button>(R.id.report_vehicle_button)
-
         report_menu.setOnClickListener {
-            val report_intent = Intent(this, ReportVehicle :: class.java)
+            val report_intent = Intent(this, ReportVehicleActivity :: class.java)
             startActivity(report_intent)
         }
     }

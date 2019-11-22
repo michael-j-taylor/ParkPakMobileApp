@@ -4,7 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReportVehicle">
+    tools:context=".ReportVehicleActivity">
+
+    <Button
+        android:id="@+id/report_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/report_vehicle_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/other_reason_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="@string/other_reason"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/report_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="30dp"
+        android:text="Select Reason of Report"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/report_license_plate" />
+
+    <EditText
+        android:id="@+id/report_license_plate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="@string/create_user_plate"
+        android:inputType="textPersonName"
+        android:maxLength="8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/report_vehicle_title" />
 
     <TextView
         android:id="@+id/report_vehicle_title"
@@ -18,107 +71,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/report_license_plate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:hint="@string/enter_license_plate"
-        android:inputType="textPersonName"
-        android:maxLength="8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/report_vehicle_title" />
-
-    <EditText
-        android:id="@+id/other_reason_input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="26dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:background="@color/colorPrimary"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/reason_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
+    <RadioGroup
+        android:id="@+id/report_reason_group"
+        android:layout_width="195dp"
+        android:layout_height="325dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="158dp"
-        android:text="Parked Outside Lines"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
 
-    <CheckBox
-        android:id="@+id/reason_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="158dp"
-        android:text="Parked in Handicap"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reason_one" />
+        <RadioButton
+            android:id="@+id/report_reason_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Parked Outside Lines" />
 
-    <CheckBox
-        android:id="@+id/reason_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="158dp"
-        android:text="Parked in EV Spot"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reason_two" />
+        <RadioButton
+            android:id="@+id/report_reason_2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Parked in Handicap" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="176dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/report_license_plate" />
+        <RadioButton
+            android:id="@+id/report_reason_3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Parked in EV Spot" />
 
-    <CheckBox
-        android:id="@+id/reason_other"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="158dp"
-        android:text="Other"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reason_three" />
-
+        <RadioButton
+            android:id="@+id/report_reason_other"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Other" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

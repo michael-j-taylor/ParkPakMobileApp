@@ -40,8 +40,9 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
-        android:hint="@string/enter_license_plate"
+        android:hint="@string/create_user_plate"
         android:inputType="textPersonName"
+        android:maxLength="8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,6 +85,7 @@
         android:ems="10"
         android:hint="@string/card_cvv"
         android:inputType="numberPassword"
+        android:maxLength="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CardExpiration" />
@@ -98,6 +100,7 @@
         android:ems="10"
         android:hint="@string/card_number"
         android:inputType="numberPassword"
+        android:maxLength="16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -112,6 +115,7 @@
         android:ems="10"
         android:hint="@string/card_expiration_date"
         android:inputType="numberPassword"
+        android:maxLength="4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NameOnCard" />
