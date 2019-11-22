@@ -29,7 +29,7 @@ class CreateNewUser : AppCompatActivity() {
         })
 
         button_skip.setOnClickListener {
-            val intent = Intent(this, MainMenuActivity :: class.java)
+            val intent = Intent(this, MapsActivity :: class.java)
             startActivity(intent)
         }
 
@@ -39,7 +39,7 @@ class CreateNewUser : AppCompatActivity() {
                 startActivity(add_user_intent)
             }
             else {
-                val add_user_intent = Intent(this, MainMenuActivity :: class.java)
+                val add_user_intent = Intent(this, MapsActivity :: class.java)
                 startActivity(add_user_intent)
             }
         }

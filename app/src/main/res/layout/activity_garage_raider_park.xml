@@ -14,7 +14,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@color/colorPrimary"
         android:text="@string/takemethere"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"

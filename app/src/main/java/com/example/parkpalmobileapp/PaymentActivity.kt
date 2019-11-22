@@ -16,11 +16,11 @@ class PaymentActivity : AppCompatActivity() {
         val payment_add_card = findViewById<Button>(R.id.payment_add_card)
 
         payment_skip.setOnClickListener {
-            val skip_intent = Intent(this, MainMenuActivity :: class.java)
+            val skip_intent = Intent(this, MapsActivity :: class.java)
             startActivity(skip_intent)
         }
         payment_add_card.setOnClickListener {
-            val add_card_intent = Intent(this, MainMenuActivity :: class.java)
+            val add_card_intent = Intent(this, MapsActivity :: class.java)
             startActivity(add_card_intent)
         }
     }

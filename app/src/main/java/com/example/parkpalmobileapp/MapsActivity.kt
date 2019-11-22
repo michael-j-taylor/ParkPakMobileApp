@@ -5,6 +5,7 @@ import android.content.Intent
 import android.location.Address
 import android.location.Geocoder
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -28,6 +29,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        val button_save = findViewById<Button>(R.id.savespot)
+        val button_report = findViewById<Button>(R.id.reportcar)
+
+        button_save.setOnClickListener {
+            val intent = Intent(this, SaveParkingSpot :: class.java)
+            startActivity(intent)
+        }
+
+        button_report.setOnClickListener {
+            val intent = Intent(this, ReportVehicle :: class.java)
+            startActivity(intent)
+        }
     }
 
     /**

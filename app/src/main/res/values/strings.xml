@@ -21,4 +21,11 @@
     <string name="takemethere">Take me there!</string>
     <string name="z4_counter">6</string>
     <string name="spaces_remaining">spaces remaining</string>
+    <string name="enter_license_plate">License plate</string>
+    <string name="vehicle_make">Vehicle make</string>
+    <string name="vehicle_model">Vehicle model</string>
+    <string name="vehicle_color">Vehicle color</string>
+    <string name="comments">Additional comments</string>
+    <string name="floor">Floor</string>
+    <string name="space">Parking space</string>
 </resources>
