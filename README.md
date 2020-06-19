@@ -1,2 +1,3 @@
 # ParkPakMobileApp
-Barebones sample Android application for a parking garage locatior app.
+
+Proof of concept Android application for a parking garage locatior app.
