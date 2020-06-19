@@ -1,2 +1,2 @@
 # ParkPakMobileApp
-Mobile application for ParkPal
+Barebones sample Android application for a parking garage locatior app.
